@@ -1,0 +1,88 @@
+{
+  "expo": {
+    "name": "goalkeeper",
+    "slug": "goalkeeper",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "goalkeeper",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jaemini.goalkeeper"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.jaemini.goalkeeper"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      [
+        "expo-build-properties",
+          {
+            "android": {
+              "extraMavenRepos": [
+                "https://devrepo.kakao.com/nexus/content/groups/public/"
+              ],
+              "newArchEnabled": true
+            },
+            "ios": {
+              "newArchEnabled": true
+            }
+          }
+    ],
+    [
+        "@react-native-kakao/core",
+        {
+          "nativeAppKey": "b6c480ef45dfffc865dda75b99e2cccf",
+          "android": {
+            "authCodeHandlerActivity": true
+          },
+          "ios": {
+            "authCodeHandlerActivity": true
+          }
+        }
+    ],
+    [
+      "expo-image-picker",
+        {
+          "photosPermission": "게시글에 사진을 첨부하기 위해 사진 접근 권한이 필요합니다."
+        }
+    ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c5e7ac8a-e3f8-47d9-aeb3-b74384975def"
+      }
+    }
+  }
+}
